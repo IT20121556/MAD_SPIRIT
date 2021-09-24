@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".OrderActivity">
+
+    <LinearLayout
+        android:id="@+id/panal"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#511CB1"
+        android:orientation="horizontal"
+        android:weightSum="16">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+        <TextView
+            android:id="@+id/txtTotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="11"
+            android:gravity="center"
+            android:text="Order item"
+            android:textColor="#F6F0F0"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:id="@+id/btnCart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <ImageView
+                android:id="@+id/cartButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_baseline_shopping_cart_24" />
+
+            <com.nex3z.notificationbadge.NotificationBadge
+                android:id="@+id/badge"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@+id/cartButton"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/cartButton"
+                app:nbMaxTextLength="3" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navigation"
+        android:layout_below="@id/panal"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal|center_vertical">
+
+            <TextView
+                android:id="@+id/txt_itemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="6dp"
+                android:text="Item name"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/details_panel"
+            android:layout_width="match_parent"
+            android:layout_height="218dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/img_itemImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    tools:srcCompat="@drawable/ic_baseline_image_24" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="27dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:id="@+id/txtPricelable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="#C15E5E"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="123dp"
+                        android:layout_gravity="bottom">
+
+                        <Button
+                            android:id="@+id/btnOrder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:background="#FFFFFF"
+                            android:text="Order"
+                            app:icon="@drawable/ic_baseline_shopping_cart_24" />
+                    </FrameLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DCFFFFFF"
+            app:layout_constraintBottom_toBottomOf="@id/details_panel">
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#DCFFFFFF"
+                android:orientation="vertical">
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#DCFFFFFF">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="15dp"
+                        android:text="Reviews"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/feedBack_recycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:background="#DCFFFFFF"
+                        android:padding="8dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#DCFFFFFF"
+                        android:padding="6dp"
+                        app:layout_constraintBottom_toBottomOf="@id/feedBack_recycle">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/editTextTextPersonName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/text_innput"
+                                android:ems="10"
+                                android:hint="Enter review"
+                                android:inputType="textPersonName"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="15dp"
+                                android:textColorHint="#333131" />
+
+                            <Button
+                                android:id="@+id/button3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:text="Add"
+                                app:icon="@drawable/ic_baseline_send_24"
+                                app:iconGravity="end" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/purple_500"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:weightSum="16"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/navHomeBtn"
+            android:text="@string/nav_home" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/navItemBtn"
+            android:text="@string/nav_item" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/navShippingBtn"
+            android:text="@string/nav_shipping" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/navAccountBtn"
+            android:text="@string/nav_account" />
+
+    </LinearLayout>
+
+</RelativeLayout>

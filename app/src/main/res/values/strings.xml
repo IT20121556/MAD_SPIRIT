@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Blink Smart Mart</string>
+
+    <string name="menu_home">Menu</string>
+    <string name="menu_item">Item</string>
+    <string name="menu_cart">Cart</string>
+    <string name="menu_shopping">Shopping</string>
+    <string name="menu_account">Account</string>
+
+
+    <string name="btn_addtocart">Add to cart</string>
+    <string name="btn_buy">Buy</string>
+    <string name="btn_pay">Pay</string>
+
+    <string name="title_cart">Cart</string>
+    <string name="nav_item">Item</string>
+    <string name="slogan">A fresh approach to shopping.</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_shipping">Shipping</string>
+    <string name="btn_moreItem">More Items</string>
+    <string name="nav_account">Account</string>
+</resources>

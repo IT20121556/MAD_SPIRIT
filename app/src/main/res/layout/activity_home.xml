@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:id="@+id/mainLayout"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:id="@+id/main_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navigation"
+        android:background="#DCFFFFFF"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/panal"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="#511CB1"
+            android:orientation="horizontal"
+            android:weightSum="16">
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="12"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="#F6F0F0"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/btnCart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4">
+
+                <ImageView
+                    android:id="@+id/cartButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_baseline_shopping_cart_24" />
+
+                <com.nex3z.notificationbadge.NotificationBadge
+                    android:id="@+id/badge"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    app:nbMaxTextLength="3" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/item_scrol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:paddingBottom="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="267dp"
+                            app:srcCompat="@drawable/home" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/app_name"
+                                android:textColor="#3E3E3E"
+                                android:textSize="24sp" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/slogan"
+                                android:textColor="#B2434343" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycle_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/showMoreBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="@string/btn_moreItem" />
+                </FrameLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/purple_500"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:weightSum="16"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/navHomeBtn"
+            android:text="@string/nav_home" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/navItemBtn"
+            android:text="@string/nav_item" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/navShippingBtn"
+            android:text="@string/nav_shipping" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/navAccountBtn"
+            android:text="@string/nav_account" />
+
+    </LinearLayout>
+
+</RelativeLayout>

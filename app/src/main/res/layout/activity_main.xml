@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/panal"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#511CB1"
+        android:orientation="horizontal"
+        android:weightSum="16">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:id="@+id/btnBack"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="11"
+            android:gravity="center"
+            android:text="Items"
+            android:textColor="#F6F0F0"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:id="@+id/btnCart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <ImageView
+                android:id="@+id/cartButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_baseline_shopping_cart_24" />
+
+            <com.nex3z.notificationbadge.NotificationBadge
+                android:id="@+id/badge"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@+id/cartButton"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/cartButton"
+                app:nbMaxTextLength="3" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navigation"
+        android:layout_below="@id/panal"
+        android:background="#8DFFFFFF"
+        android:padding="8dp" />
+
+    <LinearLayout
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/purple_500"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:weightSum="16"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/navHomeBtn"
+            android:text="@string/nav_home" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/navItemBtn"
+            android:text="@string/nav_item" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/navShippingBtn"
+            android:text="@string/nav_shipping" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/navAccountBtn"
+            android:text="@string/nav_account" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "583952713354",
+    "project_id": "shppingapp-da562",
+    "storage_bucket": "shppingapp-da562.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583952713354:android:bb3c53b96fad2a052fcf73",
+        "android_client_info": {
+          "package_name": "com.example.shppingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583952713354-taoqo9d9o04sji2kpj1a0p415u24g8eh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8z_GmlvfJP_8ri6cbLMTHx6nVQFqFaAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583952713354-taoqo9d9o04sji2kpj1a0p415u24g8eh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
