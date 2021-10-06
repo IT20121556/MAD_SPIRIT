@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "800981131617",
+    "project_id": "mad-spirit",
+    "storage_bucket": "mad-spirit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:800981131617:android:49d95062b97482e38f2520",
+        "android_client_info": {
+          "package_name": "com.example.blinksmartmart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "800981131617-3ub4gbo1ii1t768acmpmiqrmbln5i73e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMYVkg5ascxEeClvakJqo7Y3mH2oDTtOE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "800981131617-3ub4gbo1ii1t768acmpmiqrmbln5i73e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
