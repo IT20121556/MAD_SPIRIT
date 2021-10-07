@@ -13,7 +13,7 @@
         android:id="@+id/idRVCourses"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/course_rv_item" />
+        tools:listitem="@layout/product_rv_item" />
 
     <!--progress bar for loading indicator-->
     <ProgressBar

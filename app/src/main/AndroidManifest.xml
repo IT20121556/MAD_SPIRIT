@@ -28,14 +28,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".EditCourseActivity"
+            android:name=".ManageProducts"
             android:exported="true" />
         <activity
-            android:name=".AddCourseActivity"
+            android:name=".AddProducts"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_new"
-    tools:context=".AddCourseActivity">
+    tools:context=".ManageProducts">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!--edit text for course name-->
+            <!--edit text for adding a course name-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/idTILCourseName"
                 style="@style/LoginTextInputLayoutStyle"
@@ -42,7 +42,7 @@
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!--edit text for course price-->
+            <!--edit text for adding a course price-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/idTILCoursePrice"
                 style="@style/LoginTextInputLayoutStyle"
@@ -70,7 +70,7 @@
                     app:boxStrokeColor="@color/purple_200" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!--edit text for course suited for-->
+            <!--edit text for adding a course best suited for-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/idTILCourseSuitedFor"
                 style="@style/LoginTextInputLayoutStyle"
@@ -96,7 +96,7 @@
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!--edit text for course image link-->
+            <!--edit text for adding a course image link-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/idTILCourseImageLink"
                 style="@style/LoginTextInputLayoutStyle"
@@ -122,7 +122,7 @@
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!--edit text for course link-->
+            <!--edit text for adding a course link-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/idTILCourseLink"
                 style="@style/LoginTextInputLayoutStyle"
@@ -149,7 +149,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
 
-            <!--edit text for course description-->
+            <!--edit text for adding a course description-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/idTILCourseDescription"
                 style="@style/LoginTextInputLayoutStyle"
@@ -175,29 +175,51 @@
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!--button for adding a new course-->
-            <Button
-                android:id="@+id/idBtnAddCourse"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/button_back"
-                android:text="Add Your Product"
-                android:textAllCaps="false" />
+                android:orientation="horizontal"
+                android:weightSum="2">
 
+                <!--button for updating a new course-->
+                <Button
+                    android:id="@+id/idBtnAddCourse"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_back"
+                    android:text="Update Your \n Product"
+                    android:textAllCaps="false" />
 
+                <!--button for deleting a course-->
+                <Button
+                    android:id="@+id/idBtnDeleteCourse"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_back"
+                    android:text="Delete Your \n Product"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
         </LinearLayout>
 
-        <!--progress bar for loading indicator-->
+        <!--progress bar for displaying a loading indicator-->
         <ProgressBar
             android:id="@+id/idPBLoading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
+            android:layout_marginTop="20dp"
             android:indeterminate="true"
             android:indeterminateDrawable="@drawable/progress_back"
             android:visibility="gone" />
