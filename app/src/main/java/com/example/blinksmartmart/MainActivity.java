@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements ItemsRVAdapter.Co
         mAuth = FirebaseAuth.getInstance();
         itemsRVModalArrayList = new ArrayList<>();
         // on below line we are getting database reference.
-        databaseReference = firebaseDatabase.getReference("Courses");
+        databaseReference = firebaseDatabase.getReference("Products");
         // on below line adding a click listener for our floating action button.
         addCourseFAB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements ItemsRVAdapter.Co
         courseRV.setLayoutManager(new LinearLayoutManager(this));
         // setting adapter to recycler view on below line.
         courseRV.setAdapter(itemsRVAdapter);
-        // on below line calling a method to fetch courses from database.
+        // on below line calling a method to fetch products from database.
         getCourses();
     }
 
@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity implements ItemsRVAdapter.Co
         // on below line we are setting data to different views on below line.
         courseNameTV.setText(modal.getCourseName());
         courseDescTV.setText(modal.getCourseDescription());
-        suitedForTV.setText("Suited for " + modal.getBestSuitedFor());
+        suitedForTV.setText("Category: " + modal.getBestSuitedFor());
         priceTV.setText("Rs." + modal.getCoursePrice());
         Picasso.get().load(modal.getCourseImg()).into(courseIV);
         Button viewBtn = layout.findViewById(R.id.idBtnVIewDetails);
@@ -196,7 +196,7 @@ public class MainActivity extends AppCompatActivity implements ItemsRVAdapter.Co
                 // on below line we are opening our ManageProducts on below line.
                 Intent i = new Intent(MainActivity.this, ManageProducts.class);
                 // on below line we are passing our course modal
-                i.putExtra("course", modal);
+                i.putExtra("product", modal);
                 startActivity(i);
             }
         });
@@ -205,7 +205,7 @@ public class MainActivity extends AppCompatActivity implements ItemsRVAdapter.Co
             @Override
             public void onClick(View v) {
                 // on below line we are navigating to browser
-                // for displaying course details from its url
+                // for displaying product details from its url
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(modal.getCourseLink()));
                 startActivity(i);

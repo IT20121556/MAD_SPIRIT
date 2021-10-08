@@ -19,7 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class AddProducts extends AppCompatActivity {
 
     // creating variables for our button, edit text,
-    // firebase database, database refrence, progress bar.
+    // firebase database, database reference, progress bar.
     private Button addCourseBtn;
     private TextInputEditText courseNameEdt, courseDescEdt, coursePriceEdt, bestSuitedEdt, courseImgEdt, courseLinkEdt;
     FirebaseDatabase firebaseDatabase;
@@ -42,8 +42,8 @@ public class AddProducts extends AppCompatActivity {
         loadingPB = findViewById(R.id.idPBLoading);
         firebaseDatabase = FirebaseDatabase.getInstance();
         // on below line creating our database reference.
-        databaseReference = firebaseDatabase.getReference("Courses");
-        // adding click listener for our add course button.
+        databaseReference = firebaseDatabase.getReference("Products");
+        // adding click listener for our add product button.
         addCourseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,6 +69,7 @@ public class AddProducts extends AppCompatActivity {
                             Toast.makeText(AddProducts.this, "Product Added..", Toast.LENGTH_SHORT).show();
                             // starting a main activity.
                             startActivity(new Intent(AddProducts.this, MainActivity.class));
+                            finish();
 
                         }
                     }).addOnFailureListener(new OnFailureListener() {

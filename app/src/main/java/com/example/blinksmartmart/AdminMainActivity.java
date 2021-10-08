@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class AdminMainActivity extends AppCompatActivity {
 
-    CardView cardView;
+    CardView cardView, cardViewabout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,15 @@ public class AdminMainActivity extends AppCompatActivity {
                 startActivity(intent);
 
                 Toast.makeText(AdminMainActivity.this, "Showing Your Products", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        cardViewabout = (CardView) findViewById(R.id.aboutus);
+        cardViewabout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AdminMainActivity.this,AboutUs.class);
+                startActivity(intent);
             }
         });
 

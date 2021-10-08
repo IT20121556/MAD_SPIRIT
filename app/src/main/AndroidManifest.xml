@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BlinkSmartMart">
         <activity
+            android:name=".AboutUs"
+            android:exported="true" />
+        <activity
             android:name=".AdminMainActivity"
             android:exported="true" />
         <activity

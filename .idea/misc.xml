@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MAD_SPIRIT/app/src/main/res/layout/activity_about_us.xml" value="0.27447916666666666" />
         <entry key="..\:/MAD_SPIRIT/app/src/main/res/layout/activity_admin_main.xml" value="0.27447916666666666" />
+        <entry key="..\:/MAD_SPIRIT/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
         <entry key="..\:/MAD_SPIRIT/app/src/main/res/layout/activity_register.xml" value="0.27447916666666666" />
         <entry key="..\:/MAD_SPIRIT/app/src/main/res/layout/activity_user_profile.xml" value="0.27447916666666666" />
+        <entry key="..\:/MAD_SPIRIT/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.27447916666666666" />
+        <entry key="..\:/MAD_SPIRIT/app/src/main/res/layout/manage_products.xml" value="0.27447916666666666" />
         <entry key="..\:/Y2S2/MAD_SPIRIT/app/src/main/res/drawable/button_back.xml" value="0.28615384615384615" />
         <entry key="..\:/Y2S2/MAD_SPIRIT/app/src/main/res/drawable/ic_add.xml" value="0.290625" />
         <entry key="..\:/Y2S2/MAD_SPIRIT/app/src/main/res/drawable/progress_back.xml" value="0.28615384615384615" />

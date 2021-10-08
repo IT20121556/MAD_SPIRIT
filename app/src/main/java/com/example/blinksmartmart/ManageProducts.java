@@ -28,7 +28,7 @@ public class ManageProducts extends AppCompatActivity {
     DatabaseReference databaseReference;
     ItemsRVModal itemsRVModal;
     private ProgressBar loadingPB;
-    // creating a string for our course id.
+    // creating a string for our product id.
     private String courseID;
 
     @Override
@@ -46,7 +46,7 @@ public class ManageProducts extends AppCompatActivity {
         loadingPB = findViewById(R.id.idPBLoading);
         firebaseDatabase = FirebaseDatabase.getInstance();
         // on below line we are getting our modal class on which we have passed.
-        itemsRVModal = getIntent().getParcelableExtra("course");
+        itemsRVModal = getIntent().getParcelableExtra("product");
         Button deleteCourseBtn = findViewById(R.id.idBtnDeleteCourse);
 
         if (itemsRVModal != null) {
@@ -60,9 +60,9 @@ public class ManageProducts extends AppCompatActivity {
             courseID = itemsRVModal.getCourseId();
         }
 
-        // on below line we are initialing our database reference and we are adding a child as our course id.
-        databaseReference = firebaseDatabase.getReference("Courses").child(courseID);
-        // on below line we are adding click listener for our add course button.
+        // on below line we are initialing our database reference and we are adding a child as our product id.
+        databaseReference = firebaseDatabase.getReference("Products").child(courseID);
+        // on below line we are adding click listener for our add product button.
         addCourseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -114,6 +114,7 @@ public class ManageProducts extends AppCompatActivity {
                         Toast.makeText(ManageProducts.this, "Product Updated..", Toast.LENGTH_SHORT).show();
                         loadingPB.setVisibility(View.GONE);
                         startActivity(new Intent(ManageProducts.this, MainActivity.class));
+                        finish();
 
                     }
                 }).addOnFailureListener(new OnFailureListener() {
@@ -125,19 +126,19 @@ public class ManageProducts extends AppCompatActivity {
             }
         });
 
-        // adding a click listener for our delete course button.
+        // adding a click listener for our delete product button.
         deleteCourseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // calling a method to delete a course.
-                deleteCourse();
+                // calling a method to delete a product.
+                deleteProduct();
             }
         });
 
     }
 
-    private void deleteCourse() {
-        // on below line calling a method to delete the course.
+    private void deleteProduct() {
+        // on below line calling a method to delete the product.
         databaseReference.removeValue();
         // displaying a toast message on below line.
         Toast.makeText(this, "Product Deleted..", Toast.LENGTH_SHORT).show();
